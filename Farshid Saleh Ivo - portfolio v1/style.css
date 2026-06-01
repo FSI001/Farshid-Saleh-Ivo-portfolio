@@ -290,15 +290,16 @@ a:hover {
 }
 
 #skillsList {
+    list-style: none;
     overflow: hidden;
-    max-height: 500px;
-    transition: max-height 0.3s ease;
+    max-height: 0;
+    transition: max-height 0.35s ease;
+    padding-left: 0;
+    margin: 0;
 }
 
-#skillsList.collapsed {
-    max-height: 0;
-    padding: 0;
-    margin: 0;
+#skillsList.open {
+    max-height: 500px; /* big enough to fit content */
 }
 
 #toggleButton {
