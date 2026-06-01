@@ -6,11 +6,13 @@ const getYouTubeSubs = async () => {
         const response = await fetch("/.netlify/functions/subscribers");
         const data = await response.json();
 
-        subCount.innerHTML = Number(data.subscriberCount).toLocaleString();
-        subCount2.innerHTML = Number(data.subscriberCount2).toLocaleString();
+        subCount.textContent = Number(data.subscriberCount).toLocaleString();
+        subCount2.textContent = Number(data.subscriberCount2).toLocaleString();
     } catch (error) {
         console.error(error);
-        subCount.innerHTML = "Error loading subscriber count";
-        subCount2.innerHTML = "Error loading subscriber count";
+        subCount.textContent = "Error";
+        subCount2.textContent = "Error";
     }
 };
+
+getYouTubeSubs(); // ← THIS IS REQUIRED
