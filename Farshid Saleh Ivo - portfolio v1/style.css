@@ -291,17 +291,22 @@ a:hover {
 
 #skillsList {
     overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.5s ease-out;
-}
-
-#skillsList.expanded {
     max-height: 500px;
-    transition: max-height 0.5s ease-in;
+    transition: max-height 0.3s ease;
 }
 
-#skillsList li { opacity: 0; transition: opacity 0.5s ease-in-out; }
-#skillsList.expanded li { opacity: 1; }
+#skillsList.collapsed {
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+#toggleButton {
+    cursor: pointer;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+}
 
 /* ── Mobile ─────────────────────────────────────── */
 .hamburger { display: none; }
