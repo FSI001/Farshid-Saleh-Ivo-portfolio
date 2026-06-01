@@ -18,23 +18,15 @@ const getYouTubeSubs = async () => {
 getYouTubeSubs(); // ← THIS IS REQUIRED
 
 function toggleSkills() {
-    const skillsList =
-        document.getElementById("skillsList");
+    const skillsList = document.getElementById("skillsList");
+    const button = document.getElementById("toggleButton");
 
-    const toggleButton =
-        document.getElementById("toggleButton");
+    skillsList.classList.toggle("collapsed");
 
-    if (
-        skillsList.classList.contains("collapsed")
-    ) {
-        skillsList.classList.remove("collapsed");
-        skillsList.classList.add("expanded");
-
-        toggleButton.textContent =
-            "Hide Skills";
+    if (skillsList.classList.contains("collapsed")) {
+        button.textContent = "Show Skills";
     } else {
-        skillsList.classList.remove("expanded");
-        skillsList.classList.add("collapsed");
-
-        toggleButton.textContent =
+        button.textContent = "Hide Skills";
+    }
+}
             "Show Skills";
