@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farshid Saleh Ivo</title>
+    <meta name="description" content="Farshid Saleh Ivo — 14 year old web developer from Dhaka, Bangladesh. Available for hire on Fiverr.">
+    <meta name="keywords" content="Farshid Saleh Ivo, web developer, Fiverr, Bangladesh, Dhaka">
+    <meta name="author" content="Farshid Saleh Ivo">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+    <header>
+        <div class="hamburger" id="hamburgerMenu">
+            <i class="fa-solid fa-bars"></i> MENU
+        </div>
+        <ul class="tBar" id="navbar">
+            <li>
+                <a class="nav-logo" href="index.html"><span class="nav-logo__arrow">›</span> Farshid Saleh Ivo</a>
+            </li>
+            <li class="nav-links">
+                <a class="nav-link active" href="index.html">Home</a>
+                <a class="nav-link" href="equipment.html">My Equipments</a>
+                <a class="nav-link" href="contactme.html">Contact Me</a>
+            </li>
+        </ul>
+    </header>
+
+    <section>
+        <div class="fContainer">
+            <div class="fContainerDiv1"><img width="100%" src="img1.png" alt="Image"></div>
+            <div class="containerText">
+                <h2>Who am I?</h2>
+                <p>My name is Farshid Saleh Ivo, I'm 16 years old and I like to make websites. Fun fact: I have more than 2 websites just like this one lol. Anyways, I am also on <a target="_blank" href="https://www.fiverr.com/yoyofsi?public_mode=true">Fiverr</a>. Also, don't hesitate to <a href="contactme.html">contact me</a> to hire me for the gigs that are available!</p>
+                <h2>Where am I from?</h2>
+                <p>I am from a small country called <a target="_blank" href="https://g.co/kgs/AGT8WRP">Bangladesh</a>. I currently reside in <a target="_blank" href="https://g.co/kgs/2f6SWPi">Dhaka</a>.</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="fContainer">
+            <div class="containerText">
+                <h2>Education</h2>
+                <p>Yeah, not much to say except I'm in high school.</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="fContainer">
+            <div class="containerText">
+                <h2>Skills</h2>
+                <button id="toggleButton" onclick="toggleSkills()">Show Skills</button>
+                <ul id="skillsList" class="collapsed">
+                    <li><p><i class="fa-brands fa-html5"></i> - HTML</p></li>
+                    <li><p><i class="fa-brands fa-css3-alt"></i> - CSS</p></li>
+                    <li><p><i class="fa-brands fa-js"></i> - JavaScript</p></li>
+                    <li><p><i class="fa-solid fa-camera"></i> - Video Editing</p></li>
+                    <li><p><i class="fa-solid fa-pen"></i> - Graphics Design</p></li>
+                    <li><p><i class="fa-solid fa-pen"></i> - Valorant</p></li>
+                    <li><p><i class="fa-solid fa-pen"></i> - Digital Art</p></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="sContainer">
+            <div class="containerText">
+                <h2>Social media</h2>
+                <div>
+                    <p><a target="_blank" href="https://www.youtube.com/@yoyoFSI?app=desktop"><i class="fa-brands fa-youtube"></i> - yoyoFSI</a> | <span class="sub-count">234</span> Subscribers <i class="fa-solid fa-bolt" style="color: #FFD43B;"></i></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+        const hamburger = document.getElementById('hamburgerMenu');
+        const navbar = document.getElementById('navbar');
+        hamburger.addEventListener('click', () => {
+            navbar.classList.toggle('mobile-open');
+            navbar.style.display = navbar.classList.contains('mobile-open') ? 'flex' : '';
+        });
+    </script>
+</body>
+</html>

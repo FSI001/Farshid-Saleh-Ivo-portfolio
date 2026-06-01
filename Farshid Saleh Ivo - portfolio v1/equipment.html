@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farshid Saleh Ivo</title>
+    <meta name="description" content="Farshid Saleh Ivo — 14 year old web developer from Dhaka, Bangladesh. Available for hire on Fiverr.">
+    <meta name="keywords" content="Farshid Saleh Ivo, web developer, Fiverr, Bangladesh, Dhaka">
+    <meta name="author" content="Farshid Saleh Ivo">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+    <header>
+        <div class="hamburger" id="hamburgerMenu">
+            <i class="fa-solid fa-bars"></i> MENU
+        </div>
+        <ul class="tBar" id="navbar">
+            <li>
+                <a class="nav-logo" href="index.html"><span class="nav-logo__arrow">›</span> Farshid Saleh Ivo</a>
+            </li>
+            <li class="nav-links">
+                <a class="nav-link active" href="index.html">Home</a>
+                <a class="nav-link" href="equipment.html">My Equipment</a>
+                <a class="nav-link" href="contactme.html">Contact Me</a>
+            </li>
+        </ul>
+    </header>
+
+    <section>
+        <div class="products-grid">
+
+            <!-- Product Card -->
+            <div class="product-card">
+                <div class="product-card__badge">Featured</div>
+                <div class="product-card__image-wrap">
+                    <img src="images/2673_2e06b6ca-1200-4dbf-aad5-e41ffc165a36.png" alt="Insta360 X3" class="product-card__image">
+                </div>
+                <div class="product-card__body">
+                    <span class="product-card__brand">Insta360</span>
+                    <h2 class="product-card__name">Insta360 X3</h2>
+                    <p class="product-card__desc">360° action camera with 5.7K video, waterproof design, and AI-powered editing.</p>
+                    <a href="https://www.insta360.com/sal/x3?utm_term=INRV0KL" class="product-card__btn" target="_blank">
+                        View Product <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Add more product cards here following the same structure -->
+
+        </div>
+    </section>
+
+    <section class="disclaimer-section">
+        <button class="disclaimer-btn" id="disclaimerBtn" aria-expanded="false">
+            <i class="fa-solid fa-circle-info"></i> Disclaimer
+            <i class="fa-solid fa-chevron-down disclaimer-btn__chevron"></i>
+        </button>
+        <div class="disclaimer-body" id="disclaimerBody">
+            <p class="disclaimer-text">All the product links listed above are affiliate links, which means that I may earn a commission if you click on the link and make a purchase. This comes at no additional cost to you and helps support my work. I only recommend products that I personally use and believe in. Thank you for your support!</p>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+        const btn = document.getElementById('disclaimerBtn');
+        const body = document.getElementById('disclaimerBody');
+        btn.addEventListener('click', () => {
+            const isOpen = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', !isOpen);
+            body.classList.toggle('open');
+        });
+
+        const hamburger = document.getElementById('hamburgerMenu');
+        const navbar = document.getElementById('navbar');
+        hamburger.addEventListener('click', () => {
+            navbar.classList.toggle('mobile-open');
+            navbar.style.display = navbar.classList.contains('mobile-open') ? 'flex' : '';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+exports.handler = async () => {
+    const APIkey = process.env.YOUTUBE_API_KEY;
+    const youtubeID = "UCwjhIjcKGbFv_1wh8PyUExQ";
+
+    try {
+        const response = await fetch(
+            `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${youtubeID}&key=${APIkey}`
+        );
+
+        const data = await response.json();
+
+        return {
+            statusCode: 200,
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                subscriberCount:
+                    data.items[0].statistics.subscriberCount
+            })
+        };
+    } catch (error) {
+        return {
+            statusCode: 500,
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                error: "Failed to fetch subscriber count"
+            })
+        };
+    }
+};

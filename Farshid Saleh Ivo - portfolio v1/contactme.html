@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Farshid Saleh Ivo</title>
+    <meta name="description" content="Farshid Saleh Ivo — 14 year old web developer from Dhaka, Bangladesh. Available for hire on Fiverr.">
+    <meta name="keywords" content="Farshid Saleh Ivo, web developer, Fiverr, Bangladesh, Dhaka">
+    <meta name="author" content="Farshid Saleh Ivo">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <style>
+        .contact-wrap {
+            margin: 20px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .contact-header {
+            margin-bottom: 28px;
+        }
+
+        .contact-header h1 {
+            font-family: "Handjet", sans-serif;
+            font-weight: 900;
+            font-variation-settings: "ELGR" 1, "ELSH" 2;
+            font-size: 64px;
+            color: #f0f0f0;
+            margin: 0 0 6px;
+            line-height: 1;
+        }
+
+        .contact-header p {
+            font-family: "Handjet", sans-serif;
+            font-weight: 400;
+            font-size: 22px;
+            color: #555;
+            margin: 0;
+        }
+
+        .contact-form {
+            background: #111;
+            border: 1px solid #222;
+            border-radius: 20px;
+            padding: 36px;
+            width: 100%;
+            max-width: 640px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-field label {
+            font-family: "Handjet", sans-serif;
+            font-weight: 700;
+            font-variation-settings: "ELGR" 1, "ELSH" 2;
+            font-size: 18px;
+            color: #666;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            /* override global a font-size */
+            font-size: 18px;
+        }
+
+        .form-field input,
+        .form-field textarea {
+            background: #0a0a0a;
+            border: 1px solid #2a2a2a;
+            border-radius: 12px;
+            padding: 14px 18px;
+            color: #f0f0f0;
+            font-family: "Handjet", sans-serif;
+            font-weight: 700;
+            font-variation-settings: "ELGR" 1, "ELSH" 2;
+            font-size: 22px;
+            outline: none;
+            transition: border-color 0.2s ease;
+            resize: none;
+            width: 100%;
+        }
+
+        .form-field input::placeholder,
+        .form-field textarea::placeholder {
+            color: #333;
+        }
+
+        .form-field input:focus,
+        .form-field textarea:focus {
+            border-color: #555;
+        }
+
+        .form-submit {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 28px;
+            background: transparent;
+            color: #e0e0e0;
+            font-family: "Handjet", sans-serif;
+            font-weight: 700;
+            font-variation-settings: "ELGR" 1, "ELSH" 2;
+            font-size: 22px;
+            letter-spacing: 0.08em;
+            border: 1px solid #3a3a3a;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+            align-self: flex-start;
+        }
+
+        .form-submit:hover {
+            background: #ffffff10;
+            border-color: #666;
+            color: #fff;
+        }
+
+        .form-submit i {
+            font-size: 16px;
+            transition: transform 0.2s ease;
+        }
+
+        .form-submit:hover i {
+            transform: translateX(3px);
+        }
+
+        /* Success / error states */
+        .form-status {
+            display: none;
+            font-family: "Handjet", sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            padding: 14px 18px;
+            border-radius: 12px;
+            border: 1px solid;
+        }
+
+        .form-status.success {
+            display: block;
+            color: #4caf7d;
+            border-color: #1e3d2e;
+            background: #0d1f18;
+        }
+
+        .form-status.error {
+            display: block;
+            color: #e05555;
+            border-color: #3d1e1e;
+            background: #1f0d0d;
+        }
+
+        @media screen and (max-width: 600px) {
+            .contact-wrap { margin: 10px 16px; }
+            .contact-header h1 { font-size: 44px; }
+            .contact-form { padding: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="hamburger" id="hamburgerMenu">
+            <i class="fa-solid fa-bars"></i> MENU
+        </div>
+        <ul class="tBar" id="navbar">
+            <li>
+                <a class="nav-logo" href="index.html"><span class="nav-logo__arrow">›</span> Farshid Saleh Ivo</a>
+            </li>
+            <li class="nav-links">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="equipment.html">My Equipment</a>
+                <a class="nav-link active" href="contactme.html">Contact</a>
+            </li>
+        </ul>
+    </header>
+
+    <section>
+        <div class="contact-wrap">
+            <div class="contact-header">
+                <h1>Contact Me</h1>
+                <p>Got a project in mind? Send me a message.</p>
+            </div>
+
+            <!-- !! Replace YOUR_FORM_ID with your actual Formspree form ID !! -->
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+                <div class="form-field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" placeholder="What's on your mind?" required></textarea>
+                </div>
+
+                <div class="form-status" id="formStatus"></div>
+
+                <button type="submit" class="form-submit">
+                    Send Message <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // Hamburger
+        const hamburger = document.getElementById('hamburgerMenu');
+        const navbar = document.getElementById('navbar');
+        hamburger.addEventListener('click', () => {
+            navbar.classList.toggle('mobile-open');
+            navbar.style.display = navbar.classList.contains('mobile-open') ? 'flex' : '';
+        });
+
+        // Form AJAX submit (no page redirect)
+        const form = document.getElementById('contactForm');
+        const status = document.getElementById('formStatus');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('.form-submit');
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+
+            try {
+                const res = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (res.ok) {
+                    status.textContent = '✓ Message sent! I\'ll get back to you soon.';
+                    status.className = 'form-status success';
+                    form.reset();
+                } else {
+                    throw new Error();
+                }
+            } catch {
+                status.textContent = '✕ Something went wrong. Try emailing me directly.';
+                status.className = 'form-status error';
+            }
+
+            btn.innerHTML = 'Send Message <i class="fa-solid fa-arrow-right"></i>';
+            btn.disabled = false;
+        });
+    </script>
+</body>
+</html>
