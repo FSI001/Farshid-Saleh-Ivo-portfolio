@@ -29,4 +29,3 @@ function toggleSkills() {
         button.textContent = "Hide Skills";
     }
 }
-            "Show Skills";
