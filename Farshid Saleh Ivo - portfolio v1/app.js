@@ -21,11 +21,11 @@ function toggleSkills() {
     const skillsList = document.getElementById("skillsList");
     const button = document.getElementById("toggleButton");
 
-    skillsList.classList.toggle("collapsed");
+    skillsList.classList.toggle("open");
 
-    if (skillsList.classList.contains("collapsed")) {
-        button.textContent = "Show Skills";
-    } else {
+    if (skillsList.classList.contains("open")) {
         button.textContent = "Hide Skills";
+    } else {
+        button.textContent = "Show Skills";
     }
 }
