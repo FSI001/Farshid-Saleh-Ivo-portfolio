@@ -10,12 +10,17 @@ exports.handler = async () => {
 
         const data = await response.json();
 
+        const channels = {};
+        data.items.forEach(item => {
+            channels[item.id] = item.statistics.subscriberCount;
+        });
+
         return {
             statusCode: 200,
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-                subscriberCount: data.items[0].statistics.subscriberCount,
-                subscriberCount2: data.items[1].statistics.subscriberCount
+                subscriberCount: channels[channel1],
+                subscriberCount2: channels[channel2]
             })
         };
     } catch (error) {
