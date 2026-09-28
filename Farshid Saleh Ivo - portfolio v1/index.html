@@ -8,7 +8,7 @@
     <meta name="keywords" content="Farshid Saleh Ivo, web developer, Fiverr, Bangladesh, Dhaka">
     <meta name="author" content="Farshid Saleh Ivo">
 
-    <!-- Social Media Link Preview Tags (Instagram, Facebook, LinkedIn, Discord) -->
+    <!-- Social Media Link Preview Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://farshidsalehivo.netlify.app/">
     <meta property="og:title" content="Farshid Saleh Ivo | Web Developer">
@@ -187,13 +187,21 @@
             navbar.style.display = navbar.classList.contains('mobile-open') ? 'flex' : '';
         });
 
-        // Welcome Popup Control
+        // Popup Logic with 1-Week Expiry
         const popup = document.getElementById('welcomePopup');
         const closePopupBtn = document.getElementById('closePopupBtn');
 
-        window.addEventListener('load', () => {
-            popup.classList.add('show');
-        });
+        const ONE_WEEK_MS = 7 * 24 * 60 * 60 * 1000; // 7 days in milliseconds
+        const popupLastShown = localStorage.getItem('popupLastShown');
+        const now = Date.now();
+
+        // Show popup only if never shown before OR if 7 days have passed
+        if (!popupLastShown || (now - Number(popupLastShown)) > ONE_WEEK_MS) {
+            window.addEventListener('load', () => {
+                popup.classList.add('show');
+                localStorage.setItem('popupLastShown', now);
+            });
+        }
 
         const closePopup = () => {
             popup.classList.remove('show');
