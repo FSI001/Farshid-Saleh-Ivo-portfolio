@@ -16,8 +16,85 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Popup Styles -->
+    <style>
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85); /* Dark background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999; /* Stays on top of everything */
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .popup-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .popup-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90vh; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .popup-content img {
+            max-width: 100%;
+            max-height: 85vh; /* Prevents the 1350px image from overflowing off smaller screens */
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        .close-popup-btn {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background-color: #ff4757;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: background 0.2s;
+            z-index: 10000;
+            font-family: Arial, sans-serif;
+        }
+
+        .close-popup-btn:hover {
+            background-color: #ff6b81;
+        }
+    </style>
 </head>
 <body>
+    <!-- Popup HTML -->
+    <div id="welcomePopup" class="popup-overlay">
+        <div class="popup-content">
+            <div class="close-popup-btn" id="closePopupBtn">&times;</div>
+            <!-- Replace this src with your image path -->
+            <img src="nubaid.png" alt="Welcome Notice">
+        </div>
+    </div>
+
     <header>
         <div class="hamburger" id="hamburgerMenu">
             <i class="fa-solid fa-bars"></i> MENU
@@ -58,7 +135,7 @@
             <div class="containerText">
                 <h2>Skills</h2>
                 <button id="toggleButton" onclick="toggleSkills()">Show Skills</button>
-                <ul id="skillsList"">
+                <ul id="skillsList">
                     <li><p><i class="fa-brands fa-html5"></i> - HTML</p></li>
                     <li><p><i class="fa-brands fa-css3-alt"></i> - CSS</p></li>
                     <li><p><i class="fa-brands fa-js"></i> - JavaScript</p></li>
@@ -86,11 +163,36 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="app.js"></script>
     <script>
+        // Existing Mobile Menu Logic
         const hamburger = document.getElementById('hamburgerMenu');
         const navbar = document.getElementById('navbar');
         hamburger.addEventListener('click', () => {
             navbar.classList.toggle('mobile-open');
             navbar.style.display = navbar.classList.contains('mobile-open') ? 'flex' : '';
+        });
+
+        // Popup Logic
+        const popup = document.getElementById('welcomePopup');
+        const closePopupBtn = document.getElementById('closePopupBtn');
+
+        // Show popup when page loads
+        window.addEventListener('load', () => {
+            popup.classList.add('show');
+        });
+
+        // Function to close popup
+        const closePopup = () => {
+            popup.classList.remove('show');
+        };
+
+        // Close on 'X' button click
+        closePopupBtn.addEventListener('click', closePopup);
+
+        // Close on clicking outside the image (the dark background)
+        popup.addEventListener('click', (e) => {
+            if (e.target === popup) {
+                closePopup();
+            }
         });
     </script>
 </body>
