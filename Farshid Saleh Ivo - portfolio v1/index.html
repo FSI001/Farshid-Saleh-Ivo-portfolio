@@ -2,218 +2,390 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farshid Saleh Ivo</title>
-    <meta name="description" content="Farshid Saleh Ivo — 16 year old web developer from Dhaka, Bangladesh. Available for hire on Fiverr.">
-    <meta name="keywords" content="Farshid Saleh Ivo, web developer, Fiverr, Bangladesh, Dhaka">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Farshid Saleh Ivo — Web Developer &amp; Creator</title>
+    <meta name="description" content="Farshid Saleh Ivo is a web developer and content creator from Dhaka, Bangladesh. Websites, video editing and graphic design, available for freelance work on Fiverr.">
     <meta name="author" content="Farshid Saleh Ivo">
+    <meta name="theme-color" content="#0a0a0b">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://farshidsalehivo.netlify.app/">
 
-    <!-- Social Media Link Preview Tags -->
+    <!-- Open Graph / social sharing -->
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Farshid Saleh Ivo">
+    <meta property="og:title" content="Farshid Saleh Ivo — Web Developer &amp; Creator">
+    <meta property="og:description" content="Websites, video editing and graphic design from Dhaka, Bangladesh. Open for freelance work on Fiverr.">
     <meta property="og:url" content="https://farshidsalehivo.netlify.app/">
-    <meta property="og:title" content="Farshid Saleh Ivo | Web Developer">
-    <meta property="og:description" content="Farshid Saleh Ivo — 16 year old web developer from Dhaka, Bangladesh. Available for hire on Fiverr.">
-    <meta property="og:image" content="https://farshidsalehivo.netlify.app/img1.png">
+    <meta property="og:image" content="https://farshidsalehivo.netlify.app/images/og-cover.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-
-    <!-- Twitter Card Preview Tags -->
+    <meta property="og:image:alt" content="Farshid Saleh Ivo — web developer and content creator">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://farshidsalehivo.netlify.app/">
-    <meta name="twitter:title" content="Farshid Saleh Ivo | Web Developer">
-    <meta name="twitter:description" content="Farshid Saleh Ivo — 16 year old web developer from Dhaka, Bangladesh. Available for hire on Fiverr.">
-    <meta name="twitter:image" content="https://farshidsalehivo.netlify.app/img1.png">
+    <meta name="twitter:title" content="Farshid Saleh Ivo — Web Developer &amp; Creator">
+    <meta name="twitter:description" content="Websites, video editing and graphic design from Dhaka, Bangladesh.">
+    <meta name="twitter:image" content="https://farshidsalehivo.netlify.app/images/og-cover.jpg">
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Icons -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Fonts & styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">  
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@400..900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
 
-    <!-- Popup Styles -->
-    <style>
-        .popup-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.85);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-
-        .popup-overlay.show {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .popup-content {
-            position: relative;
-            max-width: 90%;
-            max-height: 90vh; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #fff;
-            padding: 10px;
-            border-radius: 8px;
-        }
-
-        .popup-content img {
-            max-width: 100%;
-            max-height: 85vh;
-            object-fit: contain;
-            border-radius: 4px;
-        }
-
-        .close-popup-btn {
-            position: absolute;
-            top: -15px;
-            right: -15px;
-            background-color: #ff4757;
-            color: white;
-            font-size: 28px;
-            font-weight: bold;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-            transition: background 0.2s;
-            z-index: 10000;
-            font-family: Arial, sans-serif;
-        }
-
-        .close-popup-btn:hover {
-            background-color: #ff6b81;
-        }
-    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Farshid Saleh Ivo",
+        "url": "https://farshidsalehivo.netlify.app/",
+        "image": "https://farshidsalehivo.netlify.app/images/og-cover.jpg",
+        "jobTitle": "Web Developer",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Dhaka",
+            "addressCountry": "BD"
+        },
+        "knowsAbout": ["HTML", "CSS", "JavaScript", "Video Editing", "Graphic Design", "Digital Art"],
+        "sameAs": [
+            "https://www.fiverr.com/yoyofsi",
+            "https://www.youtube.com/@yoyoFSI",
+            "https://www.youtube.com/@cheetota"
+        ]
+    }
+    </script>
+    <script src="app.js" defer></script>
 </head>
 <body>
-    <!-- Popup HTML -->
-    <div id="welcomePopup" class="popup-overlay">
-        <div class="popup-content">
-            <div class="close-popup-btn" id="closePopupBtn">&times;</div>
-            <img src="nubaid.png" alt="Welcome Notice">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Memorial notice --------------------------------------------------- -->
+    <div class="popup" id="welcomePopup" role="dialog" aria-modal="true" aria-label="In memory of Sheikh Mohammad Nubaid Ferdous" hidden>
+        <div class="popup__panel">
+            <button class="popup__close" id="closePopupBtn" type="button" aria-label="Close">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+            <picture>
+                <source type="image/webp" srcset="images/nubaid-900.webp">
+                <img src="nubaid.png" alt="A black mourning ribbon beside a portrait of Sheikh Mohammad Nubaid Ferdous, with the words: We won't forget you." width="900" height="1125" decoding="async">
+            </picture>
         </div>
     </div>
 
-    <header>
-        <div class="hamburger" id="hamburgerMenu">
-            <i class="fa-solid fa-bars"></i> MENU
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a class="logo" href="index.html" aria-label="Farshid Saleh Ivo — home">
+                <span class="logo__mark" aria-hidden="true">›</span> Farshid Saleh Ivo
+            </a>
+            <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu">
+                <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span></span>
+                <span class="nav-toggle__label">Menu</span>
+            </button>
+            <nav class="site-nav" id="siteNav" aria-label="Main">
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="equipment.html">Equipment</a>
+                <a href="contactme.html">Contact</a>
+                <a class="btn btn--accent btn--sm" href="https://www.fiverr.com/yoyofsi?public_mode=true" target="_blank" rel="noopener">Hire me</a>
+            </nav>
         </div>
-        <ul class="tBar" id="navbar">
-            <li>
-                <a class="nav-logo" href="index.html"><span class="nav-logo__arrow">›</span> Farshid Saleh Ivo</a>
-            </li>
-            <li class="nav-links">
-                <a class="nav-link active" href="index.html">Home</a>
-                <a class="nav-link" href="equipment.html">My Equipments</a>
-                <a class="nav-link" href="contactme.html">Contact Me</a>
-            </li>
-        </ul>
     </header>
 
-    <section>
-        <div class="fContainer">
-            <div class="fContainerDiv1"><img width="100%" src="img1.png" alt="Image"></div>
-            <div class="containerText">
-                <h2>Who am I?</h2>
-                <p>My name is Farshid Saleh Ivo, I'm 16 years old and I like to make websites. Fun fact: I have more than 2 websites just like this one lol. Anyways, I am also on <a target="_blank" href="https://www.fiverr.com/yoyofsi?public_mode=true">Fiverr</a>. Also, don't hesitate to <a href="contactme.html">contact me</a> to hire me for the gigs that are available!</p>
-                <h2>Where am I from?</h2>
-                <p>I am from a small country called <a target="_blank" href="https://g.co/kgs/AGT8WRP">Bangladesh</a>. I currently reside in <a target="_blank" href="https://g.co/kgs/2f6SWPi">Dhaka</a>.</p>
+    <main id="main">
+        <!-- Hero ---------------------------------------------------------- -->
+        <section class="hero">
+            <div class="wrap hero__grid">
+                <div class="hero__copy">
+                    <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Web developer · Dhaka, Bangladesh</p>
+                    <h1>Hi, I'm <span class="accent">Farshid</span><br class="hero-break"> Saleh Ivo.</h1>
+                    <p class="lede">
+                        I build websites, edit videos and design graphics. I'm from Dhaka, Bangladesh,
+                        and I take on freelance work through <a href="https://www.fiverr.com/yoyofsi?public_mode=true" target="_blank" rel="noopener">Fiverr</a>.
+                    </p>
+                    <div class="hero__actions">
+                        <a class="btn btn--accent" href="https://www.fiverr.com/yoyofsi?public_mode=true" target="_blank" rel="noopener">
+                            Hire me on Fiverr <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        </a>
+                        <a class="btn btn--ghost" href="contactme.html">Get in touch</a>
+                    </div>
+                    <p class="hero__availability">
+                        <span><span class="dot" aria-hidden="true"></span> Open to freelance work</span>
+                        <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Dhaka, Bangladesh</span>
+                    </p>
+                </div>
+
+                <div class="hero__visual">
+                    <div class="portrait-card">
+                        <picture>
+                            <source type="image/webp" srcset="images/portrait-512.webp 512w, images/portrait-900.webp 900w" sizes="(max-width: 980px) 60vw, 340px">
+                            <img src="images/portrait-512.png" alt="Farshid Saleh Ivo" width="900" height="900" fetchpriority="high" decoding="async">
+                        </picture>
+                        <span class="portrait-card__tag"><span class="dot" aria-hidden="true"></span> Dhaka, Bangladesh</span>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-    <section>
-        <div class="fContainer">
-            <div class="containerText">
-                <h2>Education</h2>
-                <p>Yeah, not much to say except I'm in high school.</p>
+        </section>
+
+        <!-- About --------------------------------------------------------- -->
+        <section class="section" aria-labelledby="about-title">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <span class="section-index">01 / ABOUT</span>
+                        <h2 id="about-title">A little about me</h2>
+                    </div>
+                    <p>The short version: I like making things for the web, and I've been doing it for a while.</p>
+                </div>
+
+                <div class="about-grid">
+                    <article class="info-card">
+                        <span class="info-card__num" aria-hidden="true">01</span>
+                        <h3>Who am I?</h3>
+                        <p>
+                            My name is Farshid Saleh Ivo. I build websites and spend most of my free time
+                            editing videos and designing graphics. Fun fact: I have more than two websites
+                            just like this one.
+                        </p>
+                        <p>
+                            I'm also on <a href="https://www.fiverr.com/yoyofsi?public_mode=true" target="_blank" rel="noopener">Fiverr</a>,
+                            so don't hesitate to <a href="contactme.html">contact me</a> about the gigs I have available.
+                        </p>
+                    </article>
+
+                    <article class="info-card">
+                        <span class="info-card__num" aria-hidden="true">02</span>
+                        <h3>Where am I from?</h3>
+                        <p>
+                            I'm from <a href="https://g.co/kgs/AGT8WRP" target="_blank" rel="noopener">Bangladesh</a>,
+                            a small country in South Asia, and I currently live in
+                            <a href="https://g.co/kgs/2f6SWPi" target="_blank" rel="noopener">Dhaka</a>, the capital.
+                        </p>
+                        <p>
+                            Away from the keyboard I'm usually editing a video, drawing, or playing Valorant.
+                        </p>
+                    </article>
+
+                    <article class="info-card info-card--row">
+                        <span class="info-card__num" aria-hidden="true">03</span>
+                        <h3>Education</h3>
+                        <p>I'm in high school — not much else to say.</p>
+                    </article>
+                </div>
             </div>
-        </div>
-    </section>
-    <section>
-        <div class="fContainer">
-            <div class="containerText">
-                <h2>Skills</h2>
-                <button id="toggleButton" onclick="toggleSkills()">Show Skills</button>
-                <ul id="skillsList">
-                    <li><p><i class="fa-brands fa-html5"></i> - HTML</p></li>
-                    <li><p><i class="fa-brands fa-css3-alt"></i> - CSS</p></li>
-                    <li><p><i class="fa-brands fa-js"></i> - JavaScript</p></li>
-                    <li><p><i class="fa-brands fa-wordpress"></i> - Wordpress</p></li>
-                    <li><p><i class="fa-solid fa-camera"></i> - Video Editing</p></li>
-                    <li><p><i class="fa-solid fa-pen"></i> - Graphics Design</p></li>
-                    <li><p><i class="fa-solid fa-gamepad"></i> - Valorant</p></li>
-                    <li><p><i class="fa-solid fa-palette"></i> - Digital Art</p></li>
+        </section>
+
+        <!-- Skills -------------------------------------------------------- -->
+        <section class="section" aria-labelledby="skills-title">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <span class="section-index">02 / SKILLS</span>
+                        <h2 id="skills-title">What I work with</h2>
+                    </div>
+                    <p>Everything I use to put a website, a video or a design together.</p>
+                </div>
+
+                <ul class="skills">
+                    <li class="skill">
+                        <span class="skill__icon"><i class="fa-brands fa-html5" aria-hidden="true"></i></span>
+                        <span class="skill__label">HTML</span>
+                    </li>
+                    <li class="skill">
+                        <span class="skill__icon"><i class="fa-brands fa-css3-alt" aria-hidden="true"></i></span>
+                        <span class="skill__label">CSS</span>
+                    </li>
+                    <li class="skill">
+                        <span class="skill__icon"><i class="fa-brands fa-js" aria-hidden="true"></i></span>
+                        <span class="skill__label">JavaScript</span>
+                    </li>
+                    <li class="skill">
+                        <span class="skill__icon"><i class="fa-brands fa-wordpress" aria-hidden="true"></i></span>
+                        <span class="skill__label">WordPress</span>
+                    </li>
+                    <li class="skill">
+                        <span class="skill__icon"><i class="fa-solid fa-film" aria-hidden="true"></i></span>
+                        <span class="skill__label">Video Editing</span>
+                    </li>
+                    <li class="skill">
+                        <span class="skill__icon"><i class="fa-solid fa-pen-nib" aria-hidden="true"></i></span>
+                        <span class="skill__label">Graphic Design</span>
+                    </li>
+                    <li class="skill">
+                        <span class="skill__icon"><i class="fa-solid fa-palette" aria-hidden="true"></i></span>
+                        <span class="skill__label">Digital Art</span>
+                    </li>
+                    <li class="skill">
+                        <span class="skill__icon"><i class="fa-solid fa-gamepad" aria-hidden="true"></i></span>
+                        <span class="skill__label">Valorant</span>
+                    </li>
                 </ul>
             </div>
-        </div>
-    </section>
-    <section>
-    <div class="sContainer">
-        <div class="containerText">
-            <h2>Social media</h2>
-            <div>
-                <p><a target="_blank" href="https://www.youtube.com/@yoyoFSI?app=desktop"><i class="fa-brands fa-youtube"></i> - yoyoFSI</a> | <span class="sub-count">...</span> Subscribers <i class="fa-solid fa-bolt" style="color: #FFD43B;"></i></p>
-                <p><a target="_blank" href="https://www.youtube.com/@cheetota"><i class="fa-brands fa-youtube"></i> - realfsi</a> | <span class="sub-count-2">...</span> Subscribers <i class="fa-solid fa-bolt" style="color: #FFD43B;"></i></p>
+        </section>
+
+        <!-- Reviews ------------------------------------------------------- -->
+        <section class="section" aria-labelledby="reviews-title">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <span class="section-index">03 / REVIEWS</span>
+                        <h2 id="reviews-title">What clients say</h2>
+                    </div>
+                    <p>Two gigs from my Fiverr profile, both rated five stars. There are more where these came from.</p>
+                </div>
+
+                <div class="reviews">
+                    <figure class="review">
+                        <div class="review__head">
+                            <span class="review__avatar" aria-hidden="true">A</span>
+                            <div class="review__who">
+                                <span class="review__name">alexislemare</span>
+                                <span class="review__meta">
+                                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i> United States
+                                </span>
+                            </div>
+                        </div>
+
+                        <p class="review__stars">
+                            <span class="visually-hidden">Rated 5 out of 5 stars.</span>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <span class="review__score">5.0</span>
+                        </p>
+
+                        <blockquote class="review__quote">
+                            <p>Happy with the service</p>
+                        </blockquote>
+
+                        <figcaption class="review__footer">
+                            <span class="review__gig">Game Testing &amp; Feedback</span>
+                            <span class="review__verified"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Verified</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="review">
+                        <div class="review__head">
+                            <span class="review__avatar" aria-hidden="true">G</span>
+                            <div class="review__who">
+                                <span class="review__name">gmswag</span>
+                                <span class="review__meta">
+                                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i> United States
+                                </span>
+                            </div>
+                        </div>
+
+                        <p class="review__stars">
+                            <span class="visually-hidden">Rated 5 out of 5 stars.</span>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <span class="review__score">5.0</span>
+                        </p>
+
+                        <blockquote class="review__quote">
+                            <p>You did amazing!</p>
+                        </blockquote>
+
+                        <figcaption class="review__footer">
+                            <span class="review__gig">Video Editing</span>
+                            <span class="review__verified"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Verified</span>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <p class="reviews__more">
+                    More five-star reviews on
+                    <a href="https://www.fiverr.com/yoyofsi?public_mode=true" target="_blank" rel="noopener">
+                        my Fiverr profile <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Elsewhere ----------------------------------------------------- -->
+        <section class="section" aria-labelledby="channels-title">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <span class="section-index">04 / ELSEWHERE</span>
+                        <h2 id="channels-title">Find me online</h2>
+                    </div>
+                    <p>Two YouTube channels, a Fiverr profile, and a contact form that lands in my inbox.</p>
+                </div>
+
+                <div class="channels">
+                    <a class="channel" href="https://www.youtube.com/@yoyoFSI?app=desktop" target="_blank" rel="noopener">
+                        <span class="channel__top">
+                            <span class="channel__icon"><i class="fa-brands fa-youtube" aria-hidden="true"></i></span>
+                            <i class="fa-solid fa-arrow-up-right-from-square channel__arrow" aria-hidden="true"></i>
+                        </span>
+                        <span>
+                            <span class="channel__name">yoyoFSI</span>
+                            <span class="channel__meta">YouTube channel</span>
+                        </span>
+                        <span class="channel__count" data-channel-id="UCwjhIjcKGbFv_1wh8PyUExQ" hidden>
+                            <strong data-sub-value>—</strong> subscribers
+                        </span>
+                    </a>
+
+                    <a class="channel" href="https://www.youtube.com/@cheetota" target="_blank" rel="noopener">
+                        <span class="channel__top">
+                            <span class="channel__icon"><i class="fa-brands fa-youtube" aria-hidden="true"></i></span>
+                            <i class="fa-solid fa-arrow-up-right-from-square channel__arrow" aria-hidden="true"></i>
+                        </span>
+                        <span>
+                            <span class="channel__name">realfsi</span>
+                            <span class="channel__meta">YouTube channel</span>
+                        </span>
+                        <span class="channel__count" data-channel-id="UCsgjaqe0hiWxc_VsA4uqF2Q" hidden>
+                            <strong data-sub-value>—</strong> subscribers
+                        </span>
+                    </a>
+
+                    <a class="channel channel--accent" href="https://www.fiverr.com/yoyofsi?public_mode=true" target="_blank" rel="noopener">
+                        <span class="channel__top">
+                            <span class="channel__icon"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></span>
+                            <i class="fa-solid fa-arrow-up-right-from-square channel__arrow" aria-hidden="true"></i>
+                        </span>
+                        <span>
+                            <span class="channel__name">Fiverr</span>
+                            <span class="channel__meta">@yoyofsi</span>
+                        </span>
+                        <span class="channel__count">Available for freelance work</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <a class="logo" href="index.html"><span class="logo__mark" aria-hidden="true">›</span> Farshid Saleh Ivo</a>
+                    <p>Web developer and content creator from Dhaka, Bangladesh.</p>
+                </div>
+                <nav class="footer__links" aria-label="Footer">
+                    <a href="index.html">Home</a>
+                    <a href="equipment.html">Equipment</a>
+                    <a href="contactme.html">Contact</a>
+                    <a href="https://www.fiverr.com/yoyofsi?public_mode=true" target="_blank" rel="noopener">Fiverr</a>
+                    <a href="https://www.youtube.com/@yoyoFSI?app=desktop" target="_blank" rel="noopener">YouTube</a>
+                </nav>
+            </div>
+            <div class="footer__bottom">
+                <span>© <span data-year>2026</span> Farshid Saleh Ivo. All rights reserved.</span>
+                <span>Hand-coded from scratch, one div at a time.</span>
             </div>
         </div>
-    </div>
-    </section>
-    
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="app.js"></script>
-    <script>
-        // Mobile Navigation Toggle
-        const hamburger = document.getElementById('hamburgerMenu');
-        const navbar = document.getElementById('navbar');
-        hamburger.addEventListener('click', () => {
-            navbar.classList.toggle('mobile-open');
-            navbar.style.display = navbar.classList.contains('mobile-open') ? 'flex' : '';
-        });
-
-        // Popup Logic with 1-Week Expiry
-        const popup = document.getElementById('welcomePopup');
-        const closePopupBtn = document.getElementById('closePopupBtn');
-
-        const ONE_WEEK_MS = 7 * 24 * 60 * 60 * 1000; // 7 days in milliseconds
-        const popupLastShown = localStorage.getItem('popupLastShown');
-        const now = Date.now();
-
-        // Show popup only if never shown before OR if 7 days have passed
-        if (!popupLastShown || (now - Number(popupLastShown)) > ONE_WEEK_MS) {
-            window.addEventListener('load', () => {
-                popup.classList.add('show');
-                localStorage.setItem('popupLastShown', now);
-            });
-        }
-
-        const closePopup = () => {
-            popup.classList.remove('show');
-        };
-
-        closePopupBtn.addEventListener('click', closePopup);
-
-        popup.addEventListener('click', (e) => {
-            if (e.target === popup) {
-                closePopup();
-            }
-        });
-    </script>
+    </footer>
 </body>
 </html>

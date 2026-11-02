@@ -2,267 +2,169 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact — Farshid Saleh Ivo</title>
-    <meta name="description" content="Farshid Saleh Ivo — 14 year old web developer from Dhaka, Bangladesh. Available for hire on Fiverr.">
-    <meta name="keywords" content="Farshid Saleh Ivo, web developer, Fiverr, Bangladesh, Dhaka">
+    <meta name="description" content="Contact Farshid Saleh Ivo about a website, video editing or design project. Send a message or reach out through Fiverr.">
     <meta name="author" content="Farshid Saleh Ivo">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="theme-color" content="#0a0a0b">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://farshidsalehivo.netlify.app/contactme.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Farshid Saleh Ivo">
+    <meta property="og:title" content="Contact — Farshid Saleh Ivo">
+    <meta property="og:description" content="Got a project in mind? Send a message about a website, video or design project.">
+    <meta property="og:url" content="https://farshidsalehivo.netlify.app/contactme.html">
+    <meta property="og:image" content="https://farshidsalehivo.netlify.app/images/og-cover.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Farshid Saleh Ivo — web developer and content creator">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact — Farshid Saleh Ivo">
+    <meta name="twitter:description" content="Got a project in mind? Send a message about a website, video or design project.">
+    <meta name="twitter:image" content="https://farshidsalehivo.netlify.app/images/og-cover.jpg">
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <style>
-        .contact-wrap {
-            margin: 20px 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .contact-header {
-            margin-bottom: 28px;
-        }
-
-        .contact-header h1 {
-            font-family: "Handjet", sans-serif;
-            font-weight: 900;
-            font-variation-settings: "ELGR" 1, "ELSH" 2;
-            font-size: 64px;
-            color: #f0f0f0;
-            margin: 0 0 6px;
-            line-height: 1;
-        }
-
-        .contact-header p {
-            font-family: "Handjet", sans-serif;
-            font-weight: 400;
-            font-size: 22px;
-            color: #555;
-            margin: 0;
-        }
-
-        .contact-form {
-            background: #111;
-            border: 1px solid #222;
-            border-radius: 20px;
-            padding: 36px;
-            width: 100%;
-            max-width: 640px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .form-field {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .form-field label {
-            font-family: "Handjet", sans-serif;
-            font-weight: 700;
-            font-variation-settings: "ELGR" 1, "ELSH" 2;
-            font-size: 18px;
-            color: #666;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            /* override global a font-size */
-            font-size: 18px;
-        }
-
-        .form-field input,
-        .form-field textarea {
-            background: #0a0a0a;
-            border: 1px solid #2a2a2a;
-            border-radius: 12px;
-            padding: 14px 18px;
-            color: #f0f0f0;
-            font-family: "Handjet", sans-serif;
-            font-weight: 700;
-            font-variation-settings: "ELGR" 1, "ELSH" 2;
-            font-size: 22px;
-            outline: none;
-            transition: border-color 0.2s ease;
-            resize: none;
-            width: 100%;
-        }
-
-        .form-field input::placeholder,
-        .form-field textarea::placeholder {
-            color: #333;
-        }
-
-        .form-field input:focus,
-        .form-field textarea:focus {
-            border-color: #555;
-        }
-
-        .form-submit {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 28px;
-            background: transparent;
-            color: #e0e0e0;
-            font-family: "Handjet", sans-serif;
-            font-weight: 700;
-            font-variation-settings: "ELGR" 1, "ELSH" 2;
-            font-size: 22px;
-            letter-spacing: 0.08em;
-            border: 1px solid #3a3a3a;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-            align-self: flex-start;
-        }
-
-        .form-submit:hover {
-            background: #ffffff10;
-            border-color: #666;
-            color: #fff;
-        }
-
-        .form-submit i {
-            font-size: 16px;
-            transition: transform 0.2s ease;
-        }
-
-        .form-submit:hover i {
-            transform: translateX(3px);
-        }
-
-        /* Success / error states */
-        .form-status {
-            display: none;
-            font-family: "Handjet", sans-serif;
-            font-size: 20px;
-            font-weight: 700;
-            padding: 14px 18px;
-            border-radius: 12px;
-            border: 1px solid;
-        }
-
-        .form-status.success {
-            display: block;
-            color: #4caf7d;
-            border-color: #1e3d2e;
-            background: #0d1f18;
-        }
-
-        .form-status.error {
-            display: block;
-            color: #e05555;
-            border-color: #3d1e1e;
-            background: #1f0d0d;
-        }
-
-        @media screen and (max-width: 600px) {
-            .contact-wrap { margin: 10px 16px; }
-            .contact-header h1 { font-size: 44px; }
-            .contact-form { padding: 22px; }
-        }
-    </style>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@400..900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="hamburger" id="hamburgerMenu">
-            <i class="fa-solid fa-bars"></i> MENU
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a class="logo" href="index.html" aria-label="Farshid Saleh Ivo — home">
+                <span class="logo__mark" aria-hidden="true">›</span> Farshid Saleh Ivo
+            </a>
+            <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu">
+                <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span></span>
+                <span class="nav-toggle__label">Menu</span>
+            </button>
+            <nav class="site-nav" id="siteNav" aria-label="Main">
+                <a href="index.html">Home</a>
+                <a href="equipment.html">Equipment</a>
+                <a href="contactme.html" aria-current="page">Contact</a>
+                <a class="btn btn--accent btn--sm" href="https://www.fiverr.com/yoyofsi?public_mode=true" target="_blank" rel="noopener">Hire me</a>
+            </nav>
         </div>
-        <ul class="tBar" id="navbar">
-            <li>
-                <a class="nav-logo" href="index.html"><span class="nav-logo__arrow">›</span> Farshid Saleh Ivo</a>
-            </li>
-            <li class="nav-links">
-                <a class="nav-link" href="index.html">Home</a>
-                <a class="nav-link" href="equipment.html">My Equipment</a>
-                <a class="nav-link active" href="contactme.html">Contact</a>
-            </li>
-        </ul>
     </header>
 
-    <section>
-        <div class="contact-wrap">
-            <div class="contact-header">
+    <main id="main">
+        <div class="page-head">
+            <div class="wrap">
+                <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Say hello</p>
                 <h1>Contact Me</h1>
-                <p>Got a project in mind? Send me a message.</p>
+                <p class="lede">
+                    Got a project in mind? Send me a message with a few details and I'll get back to you.
+                </p>
             </div>
-
-            <!-- !! Replace YOUR_FORM_ID with your actual Formspree form ID !! -->
-            <form class="contact-form" id="contactForm" action="https://formspree.io/f/mlgvylbv" method="POST">
-
-                <div class="form-field">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your name" required>
-                </div>
-
-                <div class="form-field">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
-                </div>
-
-                <div class="form-field">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="6" placeholder="What's on your mind?" required></textarea>
-                </div>
-
-                <div class="form-status" id="formStatus"></div>
-
-                <button type="submit" class="form-submit">
-                    Send Message <i class="fa-solid fa-arrow-right"></i>
-                </button>
-
-            </form>
         </div>
-    </section>
 
-    <script>
-        // Hamburger
-        const hamburger = document.getElementById('hamburgerMenu');
-        const navbar = document.getElementById('navbar');
-        hamburger.addEventListener('click', () => {
-            navbar.classList.toggle('mobile-open');
-            navbar.style.display = navbar.classList.contains('mobile-open') ? 'flex' : '';
-        });
+        <div class="wrap">
+            <div class="contact-layout">
+                <form class="form-card" id="contactForm" action="https://formspree.io/f/mlgvylbv" method="POST">
+                    <h2>Send a message</h2>
+                    <p class="form-card__intro">Tell me what you're working on — a short brief is enough.</p>
 
-        // Form AJAX submit (no page redirect)
-        const form = document.getElementById('contactForm');
-        const status = document.getElementById('formStatus');
+                    <input type="hidden" name="_subject" value="New message from farshidsalehivo.netlify.app">
+                    <div class="form-honeypot" hidden>
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="_gotcha" tabindex="-1" autocomplete="off">
+                    </div>
 
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const btn = form.querySelector('.form-submit');
-            btn.textContent = 'Sending...';
-            btn.disabled = true;
+                    <div class="form-field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required>
+                    </div>
 
-            try {
-                const res = await fetch(form.action, {
-                    method: 'POST',
-                    body: new FormData(form),
-                    headers: { 'Accept': 'application/json' }
-                });
+                    <div class="form-field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" inputmode="email" required>
+                    </div>
 
-                if (res.ok) {
-                    status.textContent = '✓ Message sent! I\'ll get back to you soon.';
-                    status.className = 'form-status success';
-                    form.reset();
-                } else {
-                    throw new Error();
-                }
-            } catch {
-                status.textContent = '✕ Something went wrong. Try emailing me directly.';
-                status.className = 'form-status error';
-            }
+                    <div class="form-field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="What are you building? Include a budget or deadline if you have one." required></textarea>
+                    </div>
 
-            btn.innerHTML = 'Send Message <i class="fa-solid fa-arrow-right"></i>';
-            btn.disabled = false;
-        });
-    </script>
+                    <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+
+                    <div class="form-footer">
+                        <button type="submit" class="btn btn--accent" id="submitBtn">
+                            Send message <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                        <p class="form-note">Handled by Formspree. Your details are only used to reply.</p>
+                    </div>
+                </form>
+
+                <aside class="contact-aside" aria-label="Other ways to contact me">
+                    <div class="aside-card">
+                        <h2>Prefer Fiverr?</h2>
+                        <p>You can hire me directly through my Fiverr profile — that's where all my gigs live.</p>
+                        <p class="aside-card__cta">
+                            <a class="btn btn--ghost" href="https://www.fiverr.com/yoyofsi?public_mode=true" target="_blank" rel="noopener">
+                                See my gigs <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="aside-card">
+                        <h2>Elsewhere</h2>
+                        <p>Dhaka, Bangladesh · GMT+6</p>
+                        <ul class="aside-list">
+                            <li>
+                                <a href="https://www.youtube.com/@yoyoFSI?app=desktop" target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-youtube" aria-hidden="true"></i> yoyoFSI
+                                    <span>YouTube</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/@cheetota" target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-youtube" aria-hidden="true"></i> realfsi
+                                    <span>YouTube</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="equipment.html">
+                                    <i class="fa-solid fa-camera" aria-hidden="true"></i> My equipment
+                                    <span>Gear</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <a class="logo" href="index.html"><span class="logo__mark" aria-hidden="true">›</span> Farshid Saleh Ivo</a>
+                    <p>Web developer and content creator from Dhaka, Bangladesh.</p>
+                </div>
+                <nav class="footer__links" aria-label="Footer">
+                    <a href="index.html">Home</a>
+                    <a href="equipment.html">Equipment</a>
+                    <a href="contactme.html">Contact</a>
+                    <a href="https://www.fiverr.com/yoyofsi?public_mode=true" target="_blank" rel="noopener">Fiverr</a>
+                    <a href="https://www.youtube.com/@yoyoFSI?app=desktop" target="_blank" rel="noopener">YouTube</a>
+                </nav>
+            </div>
+            <div class="footer__bottom">
+                <span>© <span data-year>2026</span> Farshid Saleh Ivo. All rights reserved.</span>
+                <span>Hand-coded from scratch, one div at a time.</span>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
